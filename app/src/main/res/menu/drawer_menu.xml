@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Find Blood" />
+
+        <item
+            android:id="@+id/nav_donor"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Become Donor" />
+
+        <item
+            android:id="@+id/nav_ai"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="AI Assistant" />
+
+        <item
+            android:id="@+id/nav_new_chat"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="New Chat" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Profile" />
+
+    </group>
+
+    <group android:id="@+id/group_bottom">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Logout" />
+    </group>
+
+</menu>

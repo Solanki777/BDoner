@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TOP HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_red_gradient"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join our blood donor community"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- FORM CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- SECTION: Personal Info -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL INFO"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/red_primary"
+                    android:letterSpacing="0.06"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- NAME -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    app:startIconTint="@color/red_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- PHONE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Phone Number"
+                    app:startIconDrawable="@android:drawable/ic_menu_call"
+                    app:startIconTint="@color/red_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- BLOOD GROUP -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Blood Group"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:startIconDrawable="@android:drawable/presence_busy"
+                    app:startIconTint="@color/red_primary">
+
+                    <Spinner
+                        android:id="@+id/spBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- SECTION: Location -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOCATION"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/red_primary"
+                    android:letterSpacing="0.06"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- STATE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp">
+
+                    <Spinner
+                        android:id="@+id/spState"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- DISTRICT -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="District"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp">
+
+                    <Spinner
+                        android:id="@+id/spDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- PINCODE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Pincode"
+                    app:startIconDrawable="@android:drawable/ic_dialog_map"
+                    app:startIconTint="@color/red_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ADDRESS -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Full Address"
+                    app:startIconDrawable="@android:drawable/ic_menu_compass"
+                    app:startIconTint="@color/red_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:minLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- SECTION: Security -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SECURITY"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/red_primary"
+                    android:letterSpacing="0.06"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- PASSWORD -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Create Password"
+                    app:startIconDrawable="@android:drawable/ic_lock_lock"
+                    app:startIconTint="@color/red_primary"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- REGISTER BUTTON -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Create Account"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-medium"
+                    app:backgroundTint="@color/red_primary"
+                    app:cornerRadius="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:padding="8dp">
+
+                    <!-- UPDATED: Changed from hardcoded grey to @color/black -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already registered? "
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign In"
+                        android:textSize="16sp"
+                        android:textColor="@color/red_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

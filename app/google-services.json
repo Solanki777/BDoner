@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831536479269",
+    "project_id": "bdoner-mahesh-01",
+    "storage_bucket": "bdoner-mahesh-01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831536479269:android:5694180e01e998347453cc",
+        "android_client_info": {
+          "package_name": "com.example.bdoner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-316WT_Y1_vPkIZgk50_hJryXP9gDl10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

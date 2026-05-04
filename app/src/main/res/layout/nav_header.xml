@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_red_gradient"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="20dp"
+    android:gravity="bottom">
+
+    <!-- AVATAR CIRCLE -->
+    <LinearLayout
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_avatar_circle"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvAvatarInitial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- USER NAME - FIX: 18sp -> 20sp -->
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- PHONE NUMBER - FIX: #FFCDD2 -> white, 13sp -> 15sp -->
+    <TextView
+        android:id="@+id/tvUserPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91 00000 00000"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_marginTop="2dp" />
+
+    <!-- BOTTOM ROW: Availability + Edit Profile -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="14dp">
+
+        <!-- AVAILABILITY SWITCH - FIX: 13sp -> 15sp -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchAvailability"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Available"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#FFFFFF60" />
+
+        <!-- EDIT PROFILE BUTTON - FIX: 12sp -> 14sp, added id -->
+        <TextView
+            android:id="@+id/btnEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_avatar_circle"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+
+
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+}
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+def OPENAI_API_KEY = localProperties.getProperty("OPENAI_API_KEY") ?: ""
+android {
+    namespace 'com.example.bdoner'
+    compileSdk 36
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    defaultConfig {
+        applicationId "com.example.bdoner"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "OPENAI_API_KEY", "\"${OPENAI_API_KEY}\""
+        }
+        release {
+            minifyEnabled false
+            buildConfigField "String", "OPENAI_API_KEY", "\"${OPENAI_API_KEY}\""
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def appName = "BDoner"
+            def versionName = variant.versionName
+            def buildType = variant.buildType.name
+
+            outputFileName = appName + "-v" + versionName + "-" + buildType + ".apk"
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    // ✅ Keep your existing Gemini SDK
+    implementation 'com.google.ai.client.generativeai:generativeai:0.2.2'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.ai.client.generativeai:generativeai:0.9.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation "androidx.core:core-splashscreen:1.0.1"
+
+
+    // ✅ Add this for Java compatibility (Futures support)
+    implementation 'com.google.guava:guava:31.0.1-android'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_red_gradient"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donor Eligibility Form"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answer honestly to ensure donor safety"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- BASIC INFO CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BASIC INFORMATION"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/red_primary"
+                    android:letterSpacing="0.06"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- AGE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age (18–65 years)"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                    app:startIconTint="@color/red_primary"
+                    app:helperText="Must be between 18 and 65 years old">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- WEIGHT -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Weight in kg (min. 50 kg)"
+                    app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+                    app:startIconTint="@color/red_primary"
+                    app:helperText="Minimum weight requirement is 50 kg">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- LAST DONATION DATE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/BDonerInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Last Donation Date (optional)"
+                    app:startIconDrawable="@android:drawable/ic_menu_today"
+                    app:startIconTint="@color/red_primary"
+                    app:helperText="Leave empty if this is your first donation"
+                    app:endIconDrawable="@android:drawable/ic_menu_my_calendar"
+                    app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLastDonation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- MEDICAL CONDITIONS CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="MEDICAL CONDITIONS"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/red_primary"
+                        android:letterSpacing="0.06"
+                        android:textAllCaps="true" />
+
+                    <!-- UPDATED: Changed from #3D3D5C to @color/black -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check all that apply"
+                        android:textSize="13sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <!-- INFO BANNER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠️"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="If any box is checked, you may not be eligible to donate."
+                        android:textSize="14sp"
+                        android:textColor="@color/red_dark" />
+
+                </LinearLayout>
+
+                <!-- CHECKBOXES -->
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I have a serious disease (HIV, Hepatitis, etc.)"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbSurgery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I had recent surgery (within 6 months)"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbTattoo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I got a tattoo or piercing recently"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbFever"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I am currently sick (fever / cold / infection)"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbAlcohol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I consumed alcohol in the last 24 hours"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I am currently on medication"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbPregnant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I am pregnant or recently pregnant"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:buttonTint="@color/red_primary" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SUBMIT CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- UPDATED: Changed from #3D3D5C to @color/black -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="* Tap the date field to open a calendar. Leave empty if you&#39;re a first-time donor."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:text="Check Eligibility &amp; Submit"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-medium"
+                    app:backgroundTint="@color/red_primary"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

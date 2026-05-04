@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BDoner</string>
+    <string name="app_tagline">Save Lives, Donate Blood</string>
+
+    <string name="welcome">Welcome Back</string>
+    <string name="become_donor">Become a Donor</string>
+    <string name="available_to_donate">Available to Donate</string>
+    <string name="find_blood">Find Blood</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="health_tips">Health Tips</string>
+    <string name="ai_assistant">AI Assistant</string>
+    <string name="new_chat">New Chat</string>
+    <string name="search_donors">Search Donors</string>
+    <string name="donor_form_title">Donor Eligibility</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="register">Create Account</string>
+    <string name="login">Sign In</string>
+    <string name="send">Send</string>
+    <string name="submit">Submit</string>
+</resources>

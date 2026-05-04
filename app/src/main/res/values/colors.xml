@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="red_primary">#C62828</color>
+    <color name="red_dark">#8E0000</color>
+    <color name="red_light">#FFEBEE</color>
+    <color name="red_accent">#FF5252</color>
+    <color name="red_medium">#EF5350</color>
+
+    <!-- Neutrals -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background_grey">#F7F8FA</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="card_bg">#FFFFFF</color>
+
+    <!-- Text -->
+    <!-- UPDATED: Pure black for better visibility on white backgrounds -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#000000</color>
+    <color name="text_hint">#424242</color>
+    <color name="text_on_red">#FFFFFF</color>
+
+    <!-- Borders & Dividers -->
+    <color name="divider">#E5E7EB</color>
+    <color name="border_light">#E5E7EB</color>
+    <color name="input_border">#D1D5DB</color>
+
+    <!-- Utility -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="ripple_red">#1AC62828</color>
+    <color name="shadow">#0D000000</color>
+    <color name="green_available">#22C55E</color>
+    <color name="amber_warning">#F59E0B</color>
+</resources>
