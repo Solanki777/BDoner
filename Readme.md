@@ -1,5 +1,5 @@
 # BDoner – Smart Blood Donation App
-
+Goal: " Do a mini project in 4 days of Time limit "
 > Note: API keys have been removed for security purposes. Please configure them manually using the steps below.
 
 ---
