@@ -132,13 +132,6 @@ String API_KEY = "YOUR_API_KEY_HERE";
 - Implementing intelligent ranking logic
 - Maintaining consistent UI/UX
 
-## Future Scope
-- Scrollable healthcare news dashboard
-- Blood camp and donation drive integration
-- Improved Google Maps with real-time tracking
-- Push notifications for urgent requests
-- Advanced AI prediction
-- Blood demand analytics
 
 ## Conclusion
 
